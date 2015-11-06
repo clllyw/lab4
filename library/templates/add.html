@@ -1,0 +1,21 @@
+﻿<form method="post">
+{% csrf_token %}
+<table border=1 align="center">
+Please full all information of the book，and if the author is not saved,please add the author.
+ <tr>
+<th>ISBN</th><th>Title</th><th>AuthorID</th><th>Publisher</th><th>PublishDate</th><th>Price</th>
+ </tr>
+ <tr>
+  <td><input name="ISBN" type="text"></td>
+  <td><input name="Title" type="text"></td>
+  <td><input name="AuthorID" type="text"></td>
+  <td><input name="Publisher" type="text"></td>
+  <td><input name="PublishDate" type="text"></td>
+  <td><input name="Price" type="text"></td>
+
+<td><a href="/add_author/">add author</a></td>
+  <td><input type="submit" value="add"></td>
+ </tr>
+</table>
+<th><a href="/">return</a></th>
+</form>

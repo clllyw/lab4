@@ -1,0 +1,26 @@
+﻿<table border=1 align="center">
+<body>
+<form action="/search/" method="get">
+<input type="text" name="search" value='Please input Author Name'><input type="submit" value="search">
+</form>
+</body>
+ <tr>
+<th>book</th>
+ </tr>
+{% for book in book_list %}
+ <tr>
+<form action="/retireve/" method="get">
+  <td><a href="/retrieve/?title={{book.Title}}">{{book.Title}}</a></td>
+</form>
+<form action="" method="get">
+  <td><a href="/delete/?ISBN={{book.ISBN}}">delete</a></td>
+</form>
+<form action="/update/" method="get">
+  <td><a href="/update/?ISBN={{book.ISBN}}">update</a></td>
+</form>
+ </tr>
+{% endfor %}
+ <tr>
+<th><a href="/add/">add</a></th>
+ </tr>
+</table>

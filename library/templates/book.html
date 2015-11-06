@@ -1,0 +1,19 @@
+﻿<table border=1 align="center">
+ <tr>
+<th>ISBN</th><th>Title</th><th>Publisher</th><th>PublishDate</th><th>Price</th><th>AuthorID</th><th>Name</th><th>Age</th><th>Country</th>
+ </tr>
+ <tr>
+  <td>{{ book_message.ISBN }}</td>
+  <td>{{ book_message.Title }}</td>
+  <td>{{ book_message.Publisher }}</td>
+  <td>{{ book_message.PublishDate }}</td>
+  <td>{{ book_message.Price }}</td>
+  <td>{{ book_message.AuthorID }}</td>
+{% for Author in author_message %}
+  <td>{{ Author.Name }}</td>
+  <td>{{ Author.Age }}</td>
+  <td>{{ Author.Country }}</td>
+ </tr>
+{% endfor %}
+</table>
+<th><a href="/">return</a></th>

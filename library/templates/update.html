@@ -1,0 +1,27 @@
+﻿<form method="post">
+{% csrf_token %}
+If the author you want to update is not saved,please add the author.
+<table border=1 align="center">
+ <tr>
+<th>ISBN</th><th>Title</th><th>AuthorID</th><th>Publisher</th><th>PublishDate</th><th>Price</th>
+ </tr>
+ <tr>
+  <td>{{ book_message.ISBN }}</td>
+  <td>{{ book_message.Title }}</td>
+  <td>{{ book_message.AuthorID }}</td>
+  <td>{{ book_message.Publisher }}</td>
+  <td>{{ book_message.PublishDate }}</td>
+  <td>{{ book_message.Price }}</td>
+</tr>
+  <td>{{ book_message.ISBN }}</td>
+  <td>{{ book_message.Title }}</td>
+  <td><input name="AuthorID" type="text"></td>
+  <td><input name="Publisher" type="text"></td>
+  <td><input name="PublishDate" type="text"></td>
+  <td><input name="Price" type="text"></td>
+  <td><a href="/add_author/">add author</a></td>
+  <td><input type="submit" value="update"></td>
+ </tr>
+</table>
+<th><a href="/">return</a></th>
+</form>
